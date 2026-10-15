@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SILK HOUSE — Heritage Silk Sarees & Heirloom Weaves</title>
+  
+  <!-- Google Fonts: Cormorant Garamond (Luxury Serif) & Montserrat (Refined Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <p>Complimentary Insured Shipping Across India • Handcrafted Pure Silk Guarantee</p>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-sub">ESTD • 2026</span>
+        <span class="logo-main">SILK HOUSE</span>
+        <span class="logo-tag">HERITAGE WEAVES</span>
+      </a>
+
+      <!-- Navigation links -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#collection" class="nav-link">Shop Sarees</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+
+      <!-- Cart Action -->
+      <div class="header-actions">
+        <a href="#collection" class="cart-btn" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-label">Cart</span>
+          <span class="cart-count" id="cart-count">0</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-backdrop"></div>
+      <div class="hero-content">
+        <span class="hero-kicker">Royalty in Every Thread</span>
+        <h1 class="hero-title">Timeless Silk. Unforgettable Elegance.</h1>
+        <p class="hero-desc">
+          Step into a world of master weaver legacies, rich zari motifs, and pure mulberry silks handcrafted for life’s grandest celebrations.
+        </p>
+        <div class="hero-actions">
+          <a href="#collection" class="btn btn-gold">Shop Collection</a>
+          <a href="#about" class="btn btn-outline-light">Our Story</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Luxury Brand Pillars / Highlights -->
+    <section class="pillars-section">
+      <div class="container">
+        <div class="pillars-grid">
+          <div class="pillar-item">
+            <span class="pillar-icon">✦</span>
+            <h3>100% Pure Silk Mark</h3>
+            <p>Certified authentic handloom silks from certified weaving clusters.</p>
+          </div>
+          <div class="pillar-item">
+            <span class="pillar-icon">⚜</span>
+            <h3>Real Gold & Silver Zari</h3>
+            <p>Intricate brocades curated with generational artistry and precision.</p>
+          </div>
+          <div class="pillar-item">
+            <span class="pillar-icon">❖</span>
+            <h3>Heirloom Quality</h3>
+            <p>Silken legacies woven to be cherished and passed through generations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Showcase Section -->
+    <section class="collection-section" id="collection">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">The Royal Wardrobe</span>
+          <h2 class="section-title">Signature Silk Sarees</h2>
+          <div class="gold-divider">
+            <span></span>
+            <i>❖</i>
+            <span></span>
+          </div>
+          <p class="section-subtitle">
+            Explore our curated gallery of authentic Kanchipuram, Banarasi, and regal Bridal creations.
+          </p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="filter-wrapper">
+          <div class="filter-tabs" role="tablist" aria-label="Saree Category Filters">
+            <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">
+              All Creations
+            </button>
+            <button class="filter-btn" data-filter="kanchipuram" role="tab" aria-selected="false">
+              Kanchipuram
+            </button>
+            <button class="filter-btn" data-filter="banarasi" role="tab" aria-selected="false">
+              Banarasi
+            </button>
+            <button class="filter-btn" data-filter="bridal" role="tab" aria-selected="false">
+              Bridal
+            </button>
+          </div>
+        </div>
+
+        <!-- Products Grid Container (Rendered dynamically via app.js) -->
+        <div class="product-grid" id="product-grid" aria-live="polite">
+          <!-- Populated by JavaScript -->
+        </div>
+
+        <!-- Empty State (Hidden by default) -->
+        <div class="empty-state" id="empty-state" style="display: none;">
+          <p>No silk sarees found for this category at the moment.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text">
+            <span class="section-kicker gold-text">Artisanal Heritage</span>
+            <h2 class="section-title text-light">Weaving Dreams in Pure Zari & Silk</h2>
+            <p>
+              At <strong>SILK HOUSE</strong>, each drape reflects centuries of sublime Indian weaving traditions. From the historic temple corridors of Kanchipuram to the sacred looms of Varanasi, we partner directly with master weavers who preserve the purity of hand-thrown shuttles and authentic zari work.
+            </p>
+            <p>
+              Whether you are preparing for your wedding day or curating a cherished heirloom wardrobe, our silks offer unmatched luster, weight, and timeless grace.
+            </p>
+            <div class="about-badges">
+              <div class="badge-item">
+                <strong>40+</strong>
+                <span>Days per Handloom Drape</span>
+              </div>
+              <div class="badge-item">
+                <strong>100%</strong>
+                <span>Pure Mulberry & Katan</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-image-card">
+            <div class="about-frame">
+              <img 
+                src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=800&q=80" 
+                alt="Intricate Handloom Zari Work" 
+                loading="lazy"
+                onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\' viewBox=\'0 0 600 400\'><rect fill=\'%23500f18\' width=\'600\' height=\'400\'/><text fill=\'%23d4af37\' font-family=\'serif\' font-size=\'22\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'>SILK HOUSE • Heritage Looms</text></svg>'"
+              >
+              <div class="about-card-caption">
+                Handcrafted Banarasi Brocade • Varanasi Looms
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col brand-col">
+          <span class="footer-brand-title">SILK HOUSE</span>
+          <p>
+            Curators of India’s most coveted handloom pure silk sarees. Honoring master craftsmanship and timeless beauty since 2026.
+          </p>
+          <div class="footer-social-icons">
+            <span title="Instagram">✦</span>
+            <span title="Pinterest">❖</span>
+            <span title="Facebook">⚜</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Weaves & Styles</h4>
+          <ul class="footer-links">
+            <li><a href="#collection" data-footer-filter="kanchipuram">Pure Kanchipuram Pattu</a></li>
+            <li><a href="#collection" data-footer-filter="banarasi">Varanasi Banarasi Katan</a></li>
+            <li><a href="#collection" data-footer-filter="bridal">Bridal Trousseau Silks</a></li>
+            <li><a href="#collection" data-footer-filter="all">All New Arrivals</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Customer Atelier</h4>
+          <ul class="footer-links">
+            <li><a href="#about">Heritage & Craftsmanship</a></li>
+            <li><a href="#site-header">Silk Mark Certification</a></li>
+            <li><a href="#site-header">Complimentary Shipping</a></li>
+            <li><a href="#site-header">Care & Storage Guide</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Boutique Inquiries</h4>
+          <p class="footer-contact-line">Personal Drape Styling & Video Consultations</p>
+          <p class="footer-contact-line"><strong>concierge@silkhouse.luxury</strong></p>
+          <p class="footer-contact-line">+91 98765 43210 (Mon - Sat)</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 SILK HOUSE. All rights reserved. Crafted with Indian Heritage & Pride.</p>
+        <p class="footer-disclaimer">MVP Prototype Edition • Silk House is a temporary brand name.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>
